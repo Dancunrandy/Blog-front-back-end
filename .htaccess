@@ -1,0 +1,4 @@
+# Allow access to assets
+<Directory /opt/lampp/htdocs/blogg/assets>
+    Allow from all
+</Directory>

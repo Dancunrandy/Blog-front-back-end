@@ -1,4 +1,4 @@
-<?php include("path.php") ?>
+<?php include("path.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
     <!-- Custom styling -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Single Post</title>
-</head>assets/
+</head>
 <body>
 
 <?php include("app/dry/header.php");?>

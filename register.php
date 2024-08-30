@@ -1,5 +1,10 @@
 <?php include("path.php") ?>
-
+<?php
+if (isset($_POST['register-btn'])){
+    var_dump($_POST);
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +24,7 @@
 <?php include(ROOT_PATH ."/app/dry/header.php");?>
      
      <div class="auth-content">
-        <form action="register.html" method="post">
+        <form action="register.php" method="post">
            <h2 class="form-title"> Register</h2> 
            
            <!-- <div class="msg error">
@@ -58,3 +63,4 @@
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
+
