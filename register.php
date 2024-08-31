@@ -1,10 +1,5 @@
 <?php include("path.php") ?>
-<?php
-if (isset($_POST['register-btn'])){
-    var_dump($_POST);
-    die();
-}
-?>
+<?php  include(ROOT_PATH . "/app/controllers/users.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
