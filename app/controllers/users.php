@@ -2,7 +2,7 @@
 
 include(ROOT_PATH . "/app/database/db.php");
 include(ROOT_PATH . "/app/helpers/validateUser.php");
-
+$errors = array();
 $username = '';
 $email = '';
 $password = '';
@@ -13,7 +13,7 @@ if (isset($_POST['register-btn'])){
       $errors = validateUser($_POST);
 
     if(count($errors) === 0){
-        unset($_POST['register-btn'], $_POST['passwordconf']);
+        unset($_POST['register-btn'], $_POST['passwordConf']);
         $_POST['admin'] = 0;
         
         $_POST['password'] = password_hash($_POST['password'],PASSWORD_DEFAULT);
