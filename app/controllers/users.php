@@ -20,7 +20,17 @@ if (isset($_POST['register-btn'])){
         
         $user_id = create('users',$_POST);
         $user = selectOne('users',['id' => $user_id]);
-        dd($user);
+        
+        
+        //user logins
+        
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['admin'] = $user['admin'];
+        $_SESSION['message'] = 'logged In';
+        $_SESSION['type'] = 'success';
+        header('location:' .BASE_URL .'/index.php');
+        exit();
     } else {
         $username = $_POST['username'];
         $email = $_POST['email'];
