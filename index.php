@@ -18,6 +18,7 @@
 </head>
 <body>
     <?php include(ROOT_PATH ."/app/dry/header.php");?>
+    <?php include(ROOT_PATH ."/app/dry/messages.php");?>   
     <!-- page wrapper -->
     <div class="page-wrapper">
         <!-- Post Slider -->
