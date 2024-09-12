@@ -1,4 +1,6 @@
 <?php include("../../path.php"); ?>
+<?php  include(ROOT_PATH . "/app/controllers/topics.php"); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +42,7 @@
                 <div class="content">
                     <h2 class="page-title">Add Topic</h2>
                     
-                    <form action="create.html" method="post">
+                    <form action="create.php" method="post">
                         <div>
                             <label>Name</label>
                             <input type="text" name="name" class="text-input">
@@ -51,7 +53,7 @@
                             <textarea name="description" id="body"></textarea>
                         </div>
                         <div>
-                           <button type="submit" class="btn btn-big">Add Topic</button>
+                           <button type="submit" name="add-topic" class="btn btn-big">Add Topic</button>
                         </div>
                     </form>
 
