@@ -1,4 +1,5 @@
 <?php include("../../path.php"); ?>
+<?php  include(ROOT_PATH . "/app/controllers/posts.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,22 +50,24 @@
                         </thead>
                         
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>This is the first post</td>
-                                <td>Dante</td>
-                                <td><a href="#" class="edit">Edit</a></td>
-                                <td><a href="#" class="delete">Delete</a></td>
-                                <td><a href="#" class="publish">Publish</a></td>
+                        
+                            <?php foreach ($posts as $key => $post ): ?>
+                                <tr>
+                                    <td><?php echo $key + 1; ?></td>
+                                    <td><?php echo $post['title'] ?></td>
+                                    <td>Dante</td>
+                                    <td><a href="#" class="edit">Edit</a></td>
+                                    <td><a href="#" class="delete">Delete</a></td>
+                                    <?php if ($post['published']): ?>
+                                        <td><a href="#" class="unpublish">unpublish</a></td>
+                                    <?php else: ?>
+                                    <td><a href="#" class="publish">publish</a></td>
+                                    <?php endif; ?>
+                                    
+                                    
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>This is the second post</td>
-                                <td>Randy</td>
-                                <td><a href="#" class="edit">Edit</a></td>
-                                <td><a href="#" class="delete">Delete</a></td>
-                                <td><a href="#" class="publish">Publish</a></td>
-                            </tr>
+                            <?php endforeach; ?>
+                        
                         </tbody>
                     </table>
                 </div>
