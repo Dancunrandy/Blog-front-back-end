@@ -40,6 +40,7 @@
                 
                 <div class="content">
                     <h2 class="page-title">Manage Posts</h2>
+                    <?php  include(ROOT_PATH . "/app/dry/messages.php"); ?>
                     
                     <table>
                         <thead>
